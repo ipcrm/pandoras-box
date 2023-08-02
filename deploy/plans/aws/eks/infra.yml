@@ -12,7 +12,9 @@ aws-k8s:
     - name: iam-role
       extension: Terraform
       description: This step creates a new IAM role for the K8s cluster nodes, allow app management
-      source: /Users/matthewcadorette/git/pandoras-box/deploy/resources/tf/aws/iam
+      source:
+        location: "git+https://github.com/ipcrm/pandoras-box.git"
+        subdir: deploy/resources/tf/aws/iam
       args:
         cloud: AWS
         outputs:

@@ -39,7 +39,7 @@ spec:
     spec:
       containers:
       - name: ecomm-rpt-frontend
-        image: matthewcadorette117/reporter-fe
+        image: ghcr.io/ipcrm/pandoras-box/reporter-fe:latest
         securityContext:
           privileged: true
         env:

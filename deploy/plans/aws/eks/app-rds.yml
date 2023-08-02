@@ -33,10 +33,9 @@ ecomm-reporter: # Deployment
       description: Create an auth token for use in the frontend
       extension: Terraform
       tags: infrastructure
-      source: /Users/matthewcadorette/git/pandoras-box/deploy/resources/tf/shared
-      # source:
-      #   location: "git+https://github.com/ipcrm/pandoras-box.git"
-      #   subdir: deploy/resources/tf/shared
+      source:
+        location: "git+https://github.com/ipcrm/pandoras-box.git"
+        subdir: deploy/resources/tf/shared
       args:
         cloud: AWS
         outputs:
@@ -81,18 +80,12 @@ ecomm-reporter: # Deployment
         - utility-ec2
         - reporter-s3
       source:
-        location: /Users/matthewcadorette/git/pandoras-box/deploy/resources/k8s/rds
+        location: "git+https://github.com/ipcrm/pandoras-box.git"
+        subdir: deploy/resources/k8s/rds
         templates:
           - "backend.yml"
           - "frontend.yml"
           - "loaddb.yml"
-      # source:
-      #   location: "git+https://github.com/ipcrm/pandoras-box.git"
-      #   subdir: deploy/resources/k8s
-      #   templates:
-      #     - "db.yml"
-      #     - "backend.yml"
-      #     - "frontend.yml"
       helpers:
         - helper: WriteValue
           run_on_dryrun: true
@@ -125,10 +118,9 @@ ecomm-reporter: # Deployment
 
     - name: deploy-traffic-generation
       extension: Ansible
-      source: /Users/matthewcadorette/git/pandoras-box/deploy/resources/ansible
-      # source:
-      #   location: "git+https://github.com/ipcrm/pandoras-box.git"
-      #   subdir: deploy/resources/ansible
+      source:
+        location: "git+https://github.com/ipcrm/pandoras-box.git"
+        subdir: deploy/resources/ansible
       needs:
         - reporter
       helpers:
