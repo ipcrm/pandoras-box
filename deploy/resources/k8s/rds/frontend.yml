@@ -46,9 +46,9 @@ spec:
         - name: ECOMM_AUTHTOKEN
           value: "{{ .authtoken }}"
         - name: ECOMM_DATABASEHOST
-          value: "ecomm-reporter-db"
+          value: "{{ .database_host }}"
         - name: ECOMM_DATABASEPORT
-          value: "3306"
+          value: "{{ .database_port }}"
         - name: ECOMM_DATABASEUSER
           value: "{{ .database_user }}"
         - name: ECOMM_DATABASEPASS
