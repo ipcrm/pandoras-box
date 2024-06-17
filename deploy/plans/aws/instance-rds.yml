@@ -96,7 +96,6 @@ ecomm-reporter: # Deployment
         - backend-ec2
       args:
         ami_type: amazonlinux
-        tags: !lookup /reporter-infra/outputs/instance_tag
         vpc_id: !lookup /reporter-vpc/outputs/vpc_id
         subnet: !lookup /reporter-vpc/outputs/subnet_id1
         instance_name: !lookup /reporter-infra/outputs/frontend_instance_name
@@ -113,7 +112,6 @@ ecomm-reporter: # Deployment
         - reporter-vpc
       args:
         ami_type: amazonlinux
-        tags: !lookup /reporter-infra/outputs/instance_tag
         vpc_id: !lookup /reporter-vpc/outputs/vpc_id
         subnet: !lookup /reporter-vpc/outputs/subnet_id1
         instance_name: !lookup /reporter-infra/outputs/backend_instance_name
