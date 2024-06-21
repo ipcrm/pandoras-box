@@ -33,4 +33,4 @@ ssrf-db-ransomware:
         extra_vars:
           database_name: order
           aws_region: !secret aws.region
-          app_url: !lookup /ecomm-reporter/reporter/outputs/frontend_app_url
+          app_url: !lookup /ecomm-reporter/reporter/outputs/app_url

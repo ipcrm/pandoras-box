@@ -44,4 +44,4 @@ ssrf-aws-discovery:
           - ssrf-run-discovery.yml
         extra_vars:
           aws_region: !secret aws.region
-          app_url: !lookup /ecomm-reporter/reporter/outputs/frontend_app_url
+          app_url: !lookup /ecomm-reporter/reporter/outputs/app_url
