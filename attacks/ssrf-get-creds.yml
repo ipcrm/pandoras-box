@@ -32,4 +32,4 @@ ssrf: # Deployment
           - ssrf-get-creds.yml
         extra_vars:
           aws_region: !secret aws.region
-          app_url: !lookup /ecomm-reporter/reporter/outputs/app_url
+          app_url: !lookup /ecomm-reporter/deploy-frontend/outputs/app_url
